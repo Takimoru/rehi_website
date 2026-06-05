@@ -20,7 +20,7 @@ const navItems: NavItem[] = [
 
 const navLinkClass = "text-sm font-medium text-gray-600 hover:text-gray-900";
 const activeNavLinkClass = "text-sm font-medium text-gray-900";
-const routeHrefs = ["/", "/about"] as const;
+const routeHrefs = ["/", "/about", "/products", ] as const;
 
 function isRouteHref(href: string): href is (typeof routeHrefs)[number] {
     return routeHrefs.includes(href as (typeof routeHrefs)[number]);
