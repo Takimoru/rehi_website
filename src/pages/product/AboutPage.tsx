@@ -8,7 +8,7 @@ export function ProductPage() {
    <main className="container mx-auto px-6 py-16">
     <div className="mb-8">
       <h1 className="text-4xl font-bold mb-4">About REHI</h1>
-      <p className="text-lg text-gray-700">
+      <p className="text-lg text-muted-foreground">
         REHI (Real Estate Health Index) is a comprehensive tool designed to provide insights into the health of the real estate market. Our mission is to empower investors, homeowners, and industry professionals with data-driven analysis and actionable insights to make informed decisions in the ever-evolving real estate landscape.
       </p>  
     </div>

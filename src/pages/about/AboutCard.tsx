@@ -1,39 +1,54 @@
 import {
   Card,
   CardContent,
-  CardDescription,
+
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 
 // Static content for AboutCard.
 // This is okay if the content is only used here.
-const aboutContent = {
+const aboutVisiContent = {
   visionTitle: "Visi",
   visionDescription:
     "To be the most trusted and reliable partner for global furniture procurement, recognized for uncompromising quality and seamless export operations.",
-  missionTitle: "Misi",
-  missionDescription: `1. Menyediakan produk berkualitas tinggi yang memenuhi kebutuhan pelanggan dengan inovasi berkelanjutan.
-2. Membangun hubungan jangka panjang dengan pelanggan melalui layanan yang unggul dan dukungan purna jual yang handal.
-3. Menerapkan praktik bisnis yang berkelanjutan untuk menjaga lingkungan dan memberikan dampak positif bagi masyarakat.
-4. Mendorong pengembangan karyawan melalui pelatihan dan kesempatan pertumbuhan untuk menciptakan tim yang kompeten dan termotivasi.`,
 };
 
-export function AboutCard() {
+const aboutMisiContent = {
+  missionTitle: "Misi",
+  missionDescription: 
+  <ul>
+    <li>Menyediakan produk berkualitas tinggi yang memenuhi kebutuhan pelanggan dengan inovasi berkelanjutan.</li>
+    <li>Membangun hubungan jangka panjang dengan pelanggan melalui layanan yang unggul dan dukungan purna jual yang handal.</li>
+    <li>Menerapkan praktik bisnis yang berkelanjutan untuk menjaga lingkungan dan memberikan dampak positif bagi masyarakat.</li>
+    <li>Mendorong pengembangan karyawan melalui pelatihan dan kesempatan pertumbuhan untuk menciptakan tim yang kompeten dan termotivasi.</li>
+  </ul>
+}
+
+export function AboutVisiCard() {
   return (
     <Card className="w-full max-w-3xl">
       <CardHeader>
-        <CardTitle>{aboutContent.visionTitle}</CardTitle>
-        <CardDescription>{aboutContent.visionDescription}</CardDescription>
+        <CardTitle>{aboutVisiContent.visionTitle}</CardTitle>
       </CardHeader>
-
       <CardContent>
-        <h3 className="text-lg font-semibold">
-          {aboutContent.missionTitle}
-        </h3>
-
         <p className="mt-2 whitespace-pre-line text-sm text-muted-foreground">
-          {aboutContent.missionDescription}
+          {aboutVisiContent.visionDescription}
+        </p>
+      </CardContent>
+    </Card>
+  );
+}
+
+export function AboutMisiCard() {
+  return (
+    <Card className="w-full max-w-3xl">
+      <CardHeader>
+        <CardTitle>{aboutMisiContent.missionTitle}</CardTitle> 
+      </CardHeader>
+      <CardContent>
+        <p className="mt-2 whitespace-pre-line text-sm text-muted-foreground">
+          {aboutMisiContent.missionDescription}
         </p>
       </CardContent>
     </Card>

@@ -18,8 +18,8 @@ const navItems: NavItem[] = [
     { label: 'Contact', href: '/contact' },
 ];
 
-const navLinkClass = "text-sm font-medium text-gray-600 hover:text-gray-900";
-const activeNavLinkClass = "text-sm font-medium text-gray-900";
+const navLinkClass = "text-sm font-medium text-muted-foreground hover:text-primary";
+const activeNavLinkClass = "text-sm font-medium text-primary";
 const routeHrefs = ["/", "/about", "/products", ] as const;
 
 function isRouteHref(href: string): href is (typeof routeHrefs)[number] {
