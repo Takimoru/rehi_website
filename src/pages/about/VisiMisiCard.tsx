@@ -9,30 +9,32 @@ import {
 // Static content for AboutCard.
 // This is okay if the content is only used here.
 const aboutVisiContent = {
-  visionTitle: "Visi",
+  visionTitle: "Our Vision",
   visionDescription:
     "To be the most trusted and reliable partner for global furniture procurement, recognized for uncompromising quality and seamless export operations.",
 };
 
 const aboutMisiContent = {
-  missionTitle: "Misi",
+  missionTitle: "Our Mission",
   missionDescription: 
-  <ul>
-    <li>Menyediakan produk berkualitas tinggi yang memenuhi kebutuhan pelanggan dengan inovasi berkelanjutan.</li>
-    <li>Membangun hubungan jangka panjang dengan pelanggan melalui layanan yang unggul dan dukungan purna jual yang handal.</li>
-    <li>Menerapkan praktik bisnis yang berkelanjutan untuk menjaga lingkungan dan memberikan dampak positif bagi masyarakat.</li>
-    <li>Mendorong pengembangan karyawan melalui pelatihan dan kesempatan pertumbuhan untuk menciptakan tim yang kompeten dan termotivasi.</li>
-  </ul>
+  [
+    "Menyediakan produk berkualitas tinggi yang memenuhi kebutuhan pelanggan dengan inovasi berkelanjutan.",
+    "Membangun hubungan jangka panjang dengan pelanggan melalui layanan yang unggul dan dukungan purna jual yang handal.",
+    "Menerapkan praktik bisnis yang berkelanjutan untuk menjaga lingkungan dan memberikan dampak positif bagi masyarakat.",
+    "Mendorong pengembangan karyawan melalui pelatihan dan kesempatan pertumbuhan untuk menciptakan tim yang kompeten dan termotivasi."
+  ]
 }
 
 export function AboutVisiCard() {
-  return (
-    <Card className="w-full max-w-3xl">
+  return (  
+    <Card className="w-full max-w-3xl bg-primary">
       <CardHeader>
-        <CardTitle>{aboutVisiContent.visionTitle}</CardTitle>
+        <CardTitle className="text-primary-foreground">{
+          aboutVisiContent.visionTitle
+        }</CardTitle>
       </CardHeader>
-      <CardContent>
-        <p className="mt-2 whitespace-pre-line text-sm text-muted-foreground">
+      <CardContent className="text-primary-foreground">
+        <p className="mt-2 whitespace-pre-line text-sm text-primary-foreground">
           {aboutVisiContent.visionDescription}
         </p>
       </CardContent>
@@ -46,10 +48,15 @@ export function AboutMisiCard() {
       <CardHeader>
         <CardTitle>{aboutMisiContent.missionTitle}</CardTitle> 
       </CardHeader>
-      <CardContent>
-        <p className="mt-2 whitespace-pre-line text-sm text-muted-foreground">
-          {aboutMisiContent.missionDescription}
-        </p>
+      <CardContent className="mt-2 whitespace-pre-line text-sm text-primary">
+        <ul className="list-none space-y-4 pl-2">
+          {aboutMisiContent.missionDescription.map((item) => (
+            <li key={item} className="before:mr-2 before:content-['-'] grid grid-cols-[auto_1fr] gap-x-2 ">
+              {item}
+              </li>
+          ))}
+          </ul>
+        
       </CardContent>
     </Card>
   );

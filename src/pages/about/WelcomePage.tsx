@@ -2,7 +2,7 @@ import aboutImage from "../../assets/RATTAN1.jpg";
 
 export function WelcomePage(){
     return(
-        <section className="relative mb-10 h-130 overflow-hidden rounded-2xl shadow-lg animate-image-reveal animation-delay-150">
+        <section className="relative mb-10 h-130 overflow-hidden shadow-lg animate-image-reveal animation-delay-150">
           <img
             src={aboutImage}
             alt="REHI about photos"
