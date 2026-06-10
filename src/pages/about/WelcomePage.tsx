@@ -18,7 +18,7 @@ export function WelcomePage(){
                 OUR STORY
               </h1>
 
-              <p className="text-6xl font-semibold uppercase text-secondary">
+              <p className="text-5xl font-semibold uppercase text-secondary font-noto-serif tracking-wide sm:px-11 sm:pt-9 lg:px-10 lg:pt-1">
                BORN IN CIREBON
                BUILD FOR THE WORLD
               </p>
