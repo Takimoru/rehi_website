@@ -1,4 +1,5 @@
 import { RouterProvider, createRouter } from "@tanstack/react-router";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import { routeTree } from "./routeTree.gen";
 
@@ -6,6 +7,8 @@ import { routeTree } from "./routeTree.gen";
 const router = createRouter({
   routeTree,
 });
+
+const queryClient = new QueryClient();
 
 // Register router type for TypeScript.
 declare module "@tanstack/react-router" {
@@ -17,5 +20,9 @@ declare module "@tanstack/react-router" {
 // App is only the router wrapper.
 // It does not manually render pages.
 export function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+  );
 }

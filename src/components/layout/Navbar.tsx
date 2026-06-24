@@ -1,77 +1,89 @@
 import { Link } from "@tanstack/react-router";
+import { Download, Menu, X } from "lucide-react";
+import { useState } from "react";
+
 import { Button } from "@/components/ui/button";
-import logo from "../../assets/REHI-02.png";
+import { navItems } from "@/config/site";
+import logo from "@/assets/REHI-02.png";
 
-type NavItem = {
-    label: string;
-    href: string;
-};
-
-const navItems: NavItem[] = [
-    { label: 'Home', href: '/' },
-    { label: 'Products', href: '/products' },
-    { label: 'Blog', href: '/blog' },
-    { label: 'Portofolio', href: '/portfolio' },
-    { label: 'Export-service', href: '/export-service' },
-    { label: 'Custom-Project', href: '/custom-project' },
-    { label: 'About', href: '/about' },
-    { label: 'Contact', href: '/contact' },
-];
-
-const navLinkClass = "text-sm font-medium text-muted-foreground hover:text-primary";
-const activeNavLinkClass = "text-sm font-medium text-primary";
-const routeHrefs = ["/", "/about", "/products", ] as const;
-
-function isRouteHref(href: string): href is (typeof routeHrefs)[number] {
-    return routeHrefs.includes(href as (typeof routeHrefs)[number]);
-}
+const navLinkClass =
+  "rounded-md px-2 py-2 text-sm font-semibold text-muted-foreground outline-none transition hover:bg-secondary hover:text-foreground focus-visible:ring-3 focus-visible:ring-ring/50";
+const activeNavLinkClass =
+  "rounded-md bg-secondary px-2 py-2 text-sm font-semibold text-primary outline-none transition focus-visible:ring-3 focus-visible:ring-ring/50";
 
 export function Navbar() {
-    return (
-        <header className="sticky top-0 z-50 border-b bg-background">
-            <nav className="container mx-auto flex items-center justify-between py-4">
-                <Link to="/" className="flex items-center gap-2">
-                    <img 
-                    src={logo}
-                    alt="REHI Logo" 
-                    className="h-14 object-contain" />
-                </Link>
+  const [isOpen, setIsOpen] = useState(false);
 
-                <div className="hidden items-center space-x-4 md:flex">
-                    {navItems.map((item) => (
-                        isRouteHref(item.href) ? (
-                            <Link
-                                key={item.href}
-                                to={item.href}
-                                activeOptions={{ exact: item.href === "/" }}
-                                activeProps={{ className: activeNavLinkClass }}
-                                className={navLinkClass}
-                            >
-                                {item.label}
-                            </Link>
-                        ) : (
-                            <a
-                                key={item.href}
-                                href={item.href}
-                                className={navLinkClass}
-                            >
-                                {item.label}
-                            </a>
-                        )
-                    ))}
-                </div>
+  return (
+    <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+        <Link to="/" className="flex items-center gap-3 rounded-md outline-none focus-visible:ring-3 focus-visible:ring-ring/50" onClick={() => setIsOpen(false)}>
+          <img src={logo} alt="REHI logo" className="h-12 w-auto object-contain" />
+          <span className="hidden text-sm font-semibold uppercase tracking-[0.18em] text-primary sm:inline">
+            REHI
+          </span>
+        </Link>
 
-                <div className="hidden md:block">
-                    <Button asChild>
-                        <a href="/catalog">Download Catalog</a>
-                    </Button>
-                </div>
+        <div className="hidden items-center gap-1 lg:flex">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              to={item.href}
+              activeOptions={{ exact: item.href === "/" }}
+              activeProps={{ className: activeNavLinkClass }}
+              className={navLinkClass}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
 
-                <Button className="md:hidden" aria-label="Open Menu">
-                         ☰
-                </Button>
-                
-            </nav>
-        </header>
-    );
+        <div className="hidden items-center gap-2 lg:flex">
+          <Button asChild>
+            <Link to="/catalog">
+              <Download aria-hidden="true" />
+              Catalog
+            </Link>
+          </Button>
+        </div>
+
+        <Button
+          type="button"
+          variant="outline"
+          size="icon"
+          className="lg:hidden"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
+          onClick={() => setIsOpen((open) => !open)}
+        >
+          {isOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+        </Button>
+      </nav>
+
+      {isOpen ? (
+        <div className="border-t border-border bg-background px-4 pb-4 shadow-sm lg:hidden">
+          <div className="mx-auto flex max-w-7xl flex-col gap-1">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                to={item.href}
+                activeOptions={{ exact: item.href === "/" }}
+                activeProps={{ className: activeNavLinkClass }}
+                className={navLinkClass}
+                onClick={() => setIsOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Button asChild className="mt-3">
+              <Link to="/catalog" onClick={() => setIsOpen(false)}>
+                <Download aria-hidden="true" />
+                Catalog
+              </Link>
+            </Button>
+          </div>
+        </div>
+      ) : null}
+    </header>
+  );
 }
