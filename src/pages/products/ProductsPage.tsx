@@ -33,7 +33,7 @@ export function ProductsPage({ activeCategorySlug }: ProductsPageProps) {
         <SectionHeader
           eyebrow="Products"
           title={heading}
-          description="From raw materials and woven components to finished furniture and custom manufacturing, REHI provides end-to-end sourcing for global importers and brands"
+          description="From raw materials and woven components to finished furniture and custom manufacturing, REHI provides end-to-end sourcing for global importers and brands."
         />
 
         <nav className="mt-10 flex gap-2 overflow-x-auto pb-2" aria-label="Product categories">

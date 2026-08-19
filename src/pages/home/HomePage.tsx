@@ -73,13 +73,18 @@ export function HomePage() {
           </div>
         </div>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div
+        className="mt-10 flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
+        onWheel={(e) => {
+          e.currentTarget.scrollLeft += e.deltaY;
+        }} 
+        >
           {productCategories.map((category) => (
             <Link
               key={category.slug}
               to="/products/$slug"
               params={{ slug: category.slug }}
-              className="group rounded-lg border border-border bg-card p-5 shadow-sm outline-none transition hover:-translate-y-0.5 hover:shadow-md focus-visible:ring-3 focus-visible:ring-ring/50"
+              className="group w-[300px] shrink-0 snap-start rounded-lg border border-border bg-card p-5 shadow-sm outline-none transition hover:-translate-y-0.5 hover:shadow-md focus-visible:ring-3 focus-visible:ring-ring/50 sm:w-[340px] lg:w-[360px]"
             >
               <h3 className="font-noto-serif text-xl font-semibold text-foreground">
                 {category.label}
