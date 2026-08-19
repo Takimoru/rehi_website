@@ -11,18 +11,28 @@ import {
 const aboutVisiContent = {
   visionTitle: "Our Vision",
   visionDescription:
-    "To be the most trusted and reliable partner for global furniture procurement, recognized for uncompromising quality and seamless export operations.",
+    "To become Indonesia’s leading global partner in the rattan industry by connecting local craftsmanship, sustainable production, and world-class quality to international markets.",
 };
 
 const aboutMisiContent = {
   missionTitle: "Our Mission",
   missionDescription: 
   [
-    "Menyediakan produk berkualitas tinggi yang memenuhi kebutuhan pelanggan dengan inovasi berkelanjutan.",
-    "Membangun hubungan jangka panjang dengan pelanggan melalui layanan yang unggul dan dukungan purna jual yang handal.",
-    "Menerapkan praktik bisnis yang berkelanjutan untuk menjaga lingkungan dan memberikan dampak positif bagi masyarakat.",
-    "Mendorong pengembangan karyawan melalui pelatihan dan kesempatan pertumbuhan untuk menciptakan tim yang kompeten dan termotivasi."
-  ]
+    "1. Deliver End-to-End Rattan Solutions",
+    "Providing complete rattan solutions, from semi-finished materials to fully finished products, tailored to meet diverse global market needs.",
+
+    "2. Empower Local Artisan Communities",
+    "Collaborating with skilled artisan partners across Indonesia to create sustainable opportunities while preserving the country’s rich craftsmanship heritage.",
+
+    "3. Maintain International Quality Standards",  
+    "Ensuring every product is produced with strict quality control, consistency, and professionalism aligned with international market expectations.",
+
+    "4. Build Reliable Global Partnerships",
+    "Creating long-term relationships with buyers, distributors, and business partners through trust, transparency, and dependable service.",
+
+    "5. Promote Sustainable Indonesian Craftsmanship",
+    "Supporting responsible production practices while showcasing the beauty and value of Indonesian natural materials to the world.**"
+  ] 
 }
 
 export function AboutVisiCard() {

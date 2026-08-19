@@ -12,7 +12,6 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as ProductsRouteImport } from './routes/products'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as ExportServicesRouteImport } from './routes/export-services'
-import { Route as CustomProjectRouteImport } from './routes/custom-project'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CatalogRouteImport } from './routes/catalog'
 import { Route as BlogRouteImport } from './routes/blog'
@@ -35,11 +34,6 @@ const PortfolioRoute = PortfolioRouteImport.update({
 const ExportServicesRoute = ExportServicesRouteImport.update({
   id: '/export-services',
   path: '/export-services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CustomProjectRoute = CustomProjectRouteImport.update({
-  id: '/custom-project',
-  path: '/custom-project',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -89,7 +83,6 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRouteWithChildren
   '/catalog': typeof CatalogRoute
   '/contact': typeof ContactRoute
-  '/custom-project': typeof CustomProjectRoute
   '/export-services': typeof ExportServicesRoute
   '/portfolio': typeof PortfolioRouteWithChildren
   '/products': typeof ProductsRouteWithChildren
@@ -103,7 +96,6 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRouteWithChildren
   '/catalog': typeof CatalogRoute
   '/contact': typeof ContactRoute
-  '/custom-project': typeof CustomProjectRoute
   '/export-services': typeof ExportServicesRoute
   '/portfolio': typeof PortfolioRouteWithChildren
   '/products': typeof ProductsRouteWithChildren
@@ -118,7 +110,6 @@ export interface FileRoutesById {
   '/blog': typeof BlogRouteWithChildren
   '/catalog': typeof CatalogRoute
   '/contact': typeof ContactRoute
-  '/custom-project': typeof CustomProjectRoute
   '/export-services': typeof ExportServicesRoute
   '/portfolio': typeof PortfolioRouteWithChildren
   '/products': typeof ProductsRouteWithChildren
@@ -134,7 +125,6 @@ export interface FileRouteTypes {
     | '/blog'
     | '/catalog'
     | '/contact'
-    | '/custom-project'
     | '/export-services'
     | '/portfolio'
     | '/products'
@@ -148,7 +138,6 @@ export interface FileRouteTypes {
     | '/blog'
     | '/catalog'
     | '/contact'
-    | '/custom-project'
     | '/export-services'
     | '/portfolio'
     | '/products'
@@ -162,7 +151,6 @@ export interface FileRouteTypes {
     | '/blog'
     | '/catalog'
     | '/contact'
-    | '/custom-project'
     | '/export-services'
     | '/portfolio'
     | '/products'
@@ -177,7 +165,6 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRouteWithChildren
   CatalogRoute: typeof CatalogRoute
   ContactRoute: typeof ContactRoute
-  CustomProjectRoute: typeof CustomProjectRoute
   ExportServicesRoute: typeof ExportServicesRoute
   PortfolioRoute: typeof PortfolioRouteWithChildren
   ProductsRoute: typeof ProductsRouteWithChildren
@@ -204,13 +191,6 @@ declare module '@tanstack/react-router' {
       path: '/export-services'
       fullPath: '/export-services'
       preLoaderRoute: typeof ExportServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/custom-project': {
-      id: '/custom-project'
-      path: '/custom-project'
-      fullPath: '/custom-project'
-      preLoaderRoute: typeof CustomProjectRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -312,7 +292,6 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRouteWithChildren,
   CatalogRoute: CatalogRoute,
   ContactRoute: ContactRoute,
-  CustomProjectRoute: CustomProjectRoute,
   ExportServicesRoute: ExportServicesRoute,
   PortfolioRoute: PortfolioRouteWithChildren,
   ProductsRoute: ProductsRouteWithChildren,

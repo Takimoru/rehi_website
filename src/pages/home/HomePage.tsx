@@ -33,10 +33,10 @@ export function HomePage() {
               {siteConfig.companyName}
             </p>
             <h1 className="mt-5 font-noto-serif text-4xl font-semibold leading-tight sm:text-6xl">
-              Export-ready rattan furniture for serious international buyers.
+              Connecting Global Buyers With Indonesia’s Finest Rattan Products
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-7 text-primary-foreground/82 sm:text-lg">
-              REHI connects hospitality procurement teams, wholesale importers, and boutique interiors buyers with Indonesian rattan production built around quality, documentation, and shipment readiness.
+              REHI is a specialized export company focused exclusively on Indonesia’s rattan industry, connecting international buyers with trusted Indonesian craftmen through end-to-end  sourcing, quality control, project management, and export coordination.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
@@ -56,14 +56,12 @@ export function HomePage() {
         </div>
       </section>
 
-      <StatBand />
-
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
           <SectionHeader
-            eyebrow="Collections"
-            title="Product families buyers can evaluate quickly."
-            description="The MVP catalog is organized around categories that matter in B2B buying: dining, lounge, outdoor, decor, and custom work."
+            eyebrow="Our Products"
+            title="Find the Right Products for Your Market"
+            description="Explore a wide range of handcrafted rattan furniture, décor, and custom solutions designed to meet the needs of international buyers, distributors, and hospitality brands."
           />
           <div className="flex justify-start lg:justify-end">
             <Button asChild variant="outline">
@@ -119,6 +117,7 @@ export function HomePage() {
           </Button>
         </div>
       </section>
+       <StatBand />
     </main>
   );
 }

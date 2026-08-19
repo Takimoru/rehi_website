@@ -18,29 +18,43 @@ export const companyStats = [
 
 export const productCategories = [
   {
-    slug: "dining",
-    label: "Dining",
-    description: "Dining chairs, benches, and tables for restaurants, villas, and wholesale ranges.",
+    slug: "Raw Materials",
+    label: "Raw Materials",
+    description: "Natural rattan poles, cores, peels, and other export-grade raw materials sourced from trusted suppliers across Indonesia",
+  },{
+    slug: "Woven Webbing",
+    label: "Woven Webbing",
+    description: "Handwoven natural rattan webbing available in various patterns and sizes for furniture, cabinetry, and interior applications.",
   },
   {
-    slug: "lounge",
-    label: "Lounge",
-    description: "Accent chairs, daybeds, and living pieces with handwoven rattan detail.",
+    slug: "Woven Panels",
+    label: "Woven Panels",
+    description: "Custom-crafted woven rattan panels designed for furniture, wall features, partitions, doors, and architectural interiors.",
   },
   {
-    slug: "outdoor",
-    label: "Outdoor",
-    description: "Covered-outdoor furniture using weather-aware construction and finishes.",
+    slug: "Furniture",
+    label: "Furniture",
+    description: "Handcrafted rattan furniture for residential, hospitality, and commercial projects, combining timeless design with export-quality craftsmanship.",
   },
   {
-    slug: "decor",
-    label: "Decor",
-    description: "Lighting, baskets, mirrors, and interior accents for retail programs.",
+    slug: "Lighting",
+    label: "Lighting",
+    description: "Artisan-made rattan pendant lamps, floor lamps, table lamps, and custom lighting solutions that bring warmth to any space.",
   },
   {
-    slug: "custom",
-    label: "Custom",
-    description: "OEM and project-specific pieces developed from drawings, samples, or mood boards.",
+    slug: "Home Decor",
+    label: "Home Decor",
+    description: "Beautiful handcrafted décor including baskets, mirrors, trays, wall décor, and accessories made from natural Indonesian rattan.",
+  },
+  {
+    slug: "Rattan Bags",
+    label: "Rattan Bags",
+    description: "Fashionable handcrafted rattan bags and accessories, perfect for retail collections, resort brands, and private label opportunities.",
+  },
+  {
+    slug: "Rattan Dolls Furniture",
+    label: "Rattan Dolls Furniture",
+    description: "Miniature handcrafted rattan furniture designed for dollhouses, children's collections, gifts, and specialty retail markets.",
   },
 ] as const;
 

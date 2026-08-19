@@ -7,6 +7,7 @@ import { SectionHeader } from "@/components/site/SectionHeader";
 import { StatBand } from "@/components/site/StatBand";
 import { companyMilestones, companyValues } from "@/data/company";
 import heroImage from "@/assets/rattan-workshop-hero.jpg";
+import { AboutMisiCard, AboutVisiCard } from "./VisiMisiCard";
 
 export function AboutPage() {
   return (
@@ -60,20 +61,14 @@ export function AboutPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-6 lg:grid-cols-2">
             <article className="rounded-lg border border-border bg-primary p-8 text-primary-foreground shadow-sm">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-secondary">
-                Vision
-              </p>
-              <h2 className="mt-4 font-noto-serif text-3xl font-semibold">
-                To become a trusted Indonesian rattan export partner for global furniture buyers.
-              </h2>
+              <div className="mt-4 font-noto-serif text-3xl font-semibold">
+                <AboutVisiCard></AboutVisiCard>
+              </div>
             </article>
             <article className="rounded-lg border border-border bg-background p-8 shadow-sm">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                Mission
-              </p>
-              <h2 className="mt-4 font-noto-serif text-3xl font-semibold text-foreground">
-                To combine Indonesian craft, repeatable production control, and export-ready service.
-              </h2>
+              <div className="mt-4 font-noto-serif text-3xl font-semibold text-foreground">
+                <AboutMisiCard></AboutMisiCard>
+              </div>
             </article>
           </div>
         </div>

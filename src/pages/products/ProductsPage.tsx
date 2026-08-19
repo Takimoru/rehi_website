@@ -20,7 +20,7 @@ export function ProductsPage({ activeCategorySlug }: ProductsPageProps) {
       ? []
       : products;
 
-  const heading = activeCategory ? `${activeCategory.label} Products` : "Export-Ready Product Range";
+  const heading = activeCategory ? `${activeCategory.label} Products` : "Rattan Solutions for Every Business";
 
   return (
     <main>
@@ -33,7 +33,7 @@ export function ProductsPage({ activeCategorySlug }: ProductsPageProps) {
         <SectionHeader
           eyebrow="Products"
           title={heading}
-          description="Scan the range by category, review MOQ and finish options, then send a product-specific WhatsApp inquiry when a piece matches your buying program."
+          description="From raw materials and woven components to finished furniture and custom manufacturing, REHI provides end-to-end sourcing for global importers and brands"
         />
 
         <nav className="mt-10 flex gap-2 overflow-x-auto pb-2" aria-label="Product categories">
