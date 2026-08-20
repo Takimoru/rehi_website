@@ -1,6 +1,4 @@
-import { Link } from "@tanstack/react-router";
-import { ArrowRight, MessageCircle } from "lucide-react";
-
+import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageMeta } from "@/components/site/PageMeta";
 import { SectionHeader } from "@/components/site/SectionHeader";
