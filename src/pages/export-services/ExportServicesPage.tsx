@@ -98,10 +98,6 @@ export function ExportServicesPage() {
               </a>
             </Button>
             <Button asChild variant="outline" className="border-primary-foreground/50 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20">
-              <Link to="/custom-project">
-                Custom Project
-                <ArrowRight aria-hidden="true" />
-              </Link>
             </Button>
           </div>
         </div>

@@ -39,8 +39,6 @@ export function AboutPage() {
         </div>
       </section>
 
-      <StatBand />
-
       <section className="mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
         <SectionHeader
           eyebrow="Company profile"
@@ -116,7 +114,7 @@ export function AboutPage() {
               Buyer next step
             </p>
             <h2 className="mt-3 font-noto-serif text-3xl font-semibold">
-              Review the product range or ask about a custom project.
+              Review the product range or ask about our products.
             </h2>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
@@ -127,11 +125,11 @@ export function AboutPage() {
               </Link>
             </Button>
             <Button asChild variant="outline" className="border-primary-foreground/50 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20">
-              <Link to="/custom-project">Custom Project</Link>
             </Button>
           </div>
         </div>
       </section>
+       <StatBand />
     </main>
   );
 }
